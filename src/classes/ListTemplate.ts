@@ -14,6 +14,18 @@ export class ListTemplate {
     p.innerText = item.format();
     li.append(p);
 
+    const button = document.createElement("button");
+    button.innerText = "Delete";
+    li.append(button);
+
+    function eventHandler(event: any) {
+      if (event.type === "click") {
+        li.remove();
+      }
+    }
+
+    button.addEventListener("click", eventHandler);
+
     if (pos === "start") {
       this.container.prepend(li);
     } else {
