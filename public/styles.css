@@ -70,4 +70,6 @@ footer a {
   color: #999;
   margin-top: 40px;
   font-size: 0.7em;
+  width: 5rem;
+  margin: 40px auto;
 }
