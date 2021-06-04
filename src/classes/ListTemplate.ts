@@ -1,4 +1,4 @@
-import { HasFormatter } from "../interfaces/HasFormatter.js";
+import { HasFormatter } from "../interfaces/HasFormatter";
 
 export class ListTemplate {
   constructor(private container: HTMLUListElement) {}
@@ -18,13 +18,13 @@ export class ListTemplate {
     button.innerText = "Delete";
     li.append(button);
 
-    function eventHandler(event: any) {
+    function deleteElement(event: any) {
       if (event.type === "click") {
         li.remove();
       }
     }
 
-    button.addEventListener("click", eventHandler);
+    button.addEventListener("click", deleteElement);
 
     if (pos === "start") {
       this.container.prepend(li);
